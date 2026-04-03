@@ -5,10 +5,14 @@ import heroImage from "../images/pexels-zeeshaanshabbir-9200228.jpg";
 ---
 
 <style>
-	@import url('https://fonts.googleapis.com/css2?family=Boldonse&display=swap');
-	*{
+	@import url("https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Boldonse&display=swap");
+	* {
 		margin: 0;
 		padding: 0;
+	}
+	body {
+		display: flex;
+		flex-direction: column;
 	}
 	.hero-section {
 		background-image: url(../images/pexels-zeeshaanshabbir-9200228.jpg);
@@ -21,10 +25,34 @@ import heroImage from "../images/pexels-zeeshaanshabbir-9200228.jpg";
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		z-index: 1;
 	}
-	h1{
-		font-family: 'Boldonse';
-		color: white;	
+	h1 {
+		font-family: "Boldonse";
+		color: white;
+	}
+	p {
+		font-family: "Archivo Narrow";
+		font-weight: 400;
+		font-size: 10px;
+		color: white;
+	}
+
+	.navigation-bar {
+		z-index: 9999;
+
+		ul {
+			display: flex;
+			flex-direction: row;
+			list-style: none;
+			column-gap: 32px;
+
+			align-items: center;
+			justify-content: center;
+
+			margin-top: 20px;
+			margin-bottom: -80px;
+		}
 	}
 </style>
 
@@ -38,9 +66,15 @@ import heroImage from "../images/pexels-zeeshaanshabbir-9200228.jpg";
 		<title>CHRONIC</title>
 	</head>
 	<body>
+		<div class="navigation-bar">
+			<ul>
+				<li><p>HOME</p></li>
+				<li><p>ABOUT</p></li>
+				<li><p>WORKS</p></li>
+			</ul>
+		</div>
 		<section class="hero-section">
 			<h1>CHRONICLES</h1>
-
 		</section>
 	</body>
 </html>
