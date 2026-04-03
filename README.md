@@ -1,43 +1,32 @@
-# Astro Starter Kit: Minimal
+chronicle watch collections
+parallax website showcasing a curated collection of watches. built with **astro** and powered by **locomotive scroll v5**.
 
-```sh
-npm create astro@latest -- --template minimal
-```
+tech stack
+astro
+locomotive scroll v5
+vanilla css / minimal js
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+getting started
+built with nodejs.
 
-## 🚀 Project Structure
+clone the repo:
+`git clone https://github.com/your-username/chronicle-watch-collections.git`
+`cd chronicle-watch-collections`
 
-Inside of your Astro project, you'll see the following folders and files:
+install dependencies:
+`npm install`
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+run the dev server:
+`npm run dev`
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+then open your browser at:
+`http://localhost:4321`
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+build for production
+`npm run build`
+`npm run preview`
 
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+to-do:
+1. implement locomotive scroll v5
+2. implement animejs
+3. host to cloudflare
