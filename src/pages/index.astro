@@ -7,12 +7,15 @@ import heroImage from "../images/pexels-zeeshaanshabbir-9200228.jpg";
 <style>
 	@import url("https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Boldonse&display=swap");
 	* {
+		box-sizing: content-box;
 		margin: 0;
 		padding: 0;
 	}
 	body {
 		display: flex;
 		flex-direction: column;
+		/* height: 8000px; */
+		/* display: block; */
 	}
 	.hero-section {
 		background-image: url(../images/pexels-zeeshaanshabbir-9200228.jpg);
@@ -27,6 +30,23 @@ import heroImage from "../images/pexels-zeeshaanshabbir-9200228.jpg";
 		justify-content: center;
 		z-index: 1;
 	}
+
+	.sticky-section-1{
+		position: sticky;
+		top:0;
+		z-index: 1;
+	}
+	.sticky-section-2{
+		position: sticky;
+		top:0;
+		z-index: 2;
+	}
+	.sticky-section-3{
+		position: sticky;
+		top:0;
+		z-index: 3;
+	}
+
 	h1 {
 		font-family: "Boldonse";
 		color: white;
@@ -39,7 +59,10 @@ import heroImage from "../images/pexels-zeeshaanshabbir-9200228.jpg";
 	}
 
 	.navigation-bar {
-		z-index: 9999;
+		position: sticky;
+		top: 0;
+		/* background-color: yellow; */
+		z-index: 99;
 
 		ul {
 			display: flex;
@@ -73,8 +96,17 @@ import heroImage from "../images/pexels-zeeshaanshabbir-9200228.jpg";
 				<li><p>WORKS</p></li>
 			</ul>
 		</div>
-		<section class="hero-section">
-			<h1>CHRONICLES</h1>
-		</section>
+		<div>
+			<section class="hero-section sticky-section-1">
+				<h1>CHRONICLE</h1>
+			</section>
+			<section class="hero-section sticky-section-2">
+				<h1>WATCH</h1>
+			</section>
+			<section class="hero-section sticky-section-3">
+				<h1>COLLECTIONS</h1>
+				
+			</section>
+		</div>
 	</body>
 </html>
