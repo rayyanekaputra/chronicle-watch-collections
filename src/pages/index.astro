@@ -1,6 +1,32 @@
 ---
-import '../styles/main.scss'
+import "../styles/main.scss";
+import { Image } from "astro:assets";
+import heroImage from "../images/pexels-zeeshaanshabbir-9200228.jpg";
 ---
+
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Boldonse&display=swap');
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	.hero-section {
+		background-image: url(../images/pexels-zeeshaanshabbir-9200228.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+
+		width: 100vw;
+		height: 100vh;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	h1{
+		font-family: 'Boldonse';
+		color: white;	
+	}
+</style>
 
 <html lang="en">
 	<head>
@@ -12,6 +38,9 @@ import '../styles/main.scss'
 		<title>CHRONIC</title>
 	</head>
 	<body>
-		<h1>CHRONICLES</h1>
+		<section class="hero-section">
+			<h1>CHRONICLES</h1>
+
+		</section>
 	</body>
 </html>
