@@ -3,7 +3,7 @@ import "../styles/main.scss";
 ---
 
 <style>
-	@import 'locomotive-scroll/dist/locomotive-scroll.css';
+	@import "locomotive-scroll/dist/locomotive-scroll.css";
 	@import url("https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Boldonse&display=swap");
 	* {
 		box-sizing: content-box;
@@ -29,24 +29,24 @@ import "../styles/main.scss";
 		z-index: 1;
 	}
 
-	.sticky-section-1{
+	.sticky-section-1 {
 		background-image: url(../images/pexels-zeeshaanshabbir-9200228.jpg);
 		position: sticky;
-		top:0;
+		top: 0;
 		z-index: 1;
 	}
-	.sticky-section-2{
+	.sticky-section-2 {
 		background-image: url(../images/pexels-ninetysevenyears-30508184.jpg);
 
 		position: sticky;
-		top:0;
+		top: 0;
 		z-index: 2;
 	}
-	.sticky-section-3{
+	.sticky-section-3 {
 		background-image: url(../images/pexels-el-gringo-photo-116752370-10658200.jpg);
 
 		position: sticky;
-		top:0;
+		top: 0;
 		z-index: 3;
 	}
 
@@ -80,6 +80,23 @@ import "../styles/main.scss";
 			margin-bottom: -80px;
 		}
 	}
+
+	.horizontal-section-wrapper {
+		display: flex;
+		flex-direction: row;
+		overflow: scroll;
+
+		.box {
+			height: 360px;
+			flex: 0 0 360px;
+		}
+		.box1 {
+			background-color: yellow;
+		}
+	}
+	.angkat-view{
+		height: 1920px;
+	}
 </style>
 
 <html lang="en">
@@ -92,7 +109,6 @@ import "../styles/main.scss";
 		<title>CHRONIC</title>
 	</head>
 	<body>
-
 		<div class="navigation-bar">
 			<ul>
 				<li><p>HOME</p></li>
@@ -100,30 +116,35 @@ import "../styles/main.scss";
 				<li><p>WORKS</p></li>
 			</ul>
 		</div>
-		<div>
+		<div class="hero-section-wrapper">
 			<section class="hero-section sticky-section-1">
 				<h1 data-scroll data-scroll-speed="0.5">CHRONICLE</h1>
 			</section>
 			<section class="hero-section sticky-section-2">
-				<h1 data-scroll data-scroll-speed="0.7">WATCH</h1>
+				<h1 data-scroll data-scroll-speed="0.5">WATCH</h1>
 			</section>
 			<section class="hero-section sticky-section-3">
-				<h1 data-scroll data-scroll-speed="1">COLLECTIONS</h1>
-				
+				<h1 data-scroll data-scroll-speed="0.5">COLLECTIONS</h1>
 			</section>
+		</div>
+		<div class="horizontal-section-wrapper">
+			<div class="box box1">BOX 1</div>
+			<div class="box box2">BOX 2</div>
+			<div class="box box3">BOX 3</div>
+		</div>
+		<div class="angkat-view">
+			ANGKAT VIEW
 		</div>
 	</body>
 </html>
 
-
 <script>
-//SCRIPT ALWAYS RENDERED CLIENT-SIDE
-import LocomotiveScroll from 'locomotive-scroll';
-const scroll = new LocomotiveScroll({
-	  lenisOptions: {
-        lerp: 0.5,
-        duration: 2,
-    }
-})
-
+	//SCRIPT ALWAYS RENDERED CLIENT-SIDE
+	import LocomotiveScroll from "locomotive-scroll";
+	const scroll = new LocomotiveScroll({
+		lenisOptions: {
+			lerp: 0.5,
+			duration: 2,
+		},
+	});
 </script>
