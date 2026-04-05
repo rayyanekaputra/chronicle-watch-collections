@@ -11,6 +11,7 @@ import "../styles/main.scss";
 		padding: 0;
 	}
 	body {
+		overscroll-behavior: none;
 		display: flex;
 		flex-direction: column;
 		/* height: 8000px; */
@@ -84,11 +85,15 @@ import "../styles/main.scss";
 	.horizontal-section-wrapper {
 		display: flex;
 		flex-direction: row;
-		overflow: scroll;
+		/* overflow: scroll; */
+		overscroll-behavior: none;
+		flex-wrap: nowrap;
+		height: 100vh;
+		z-index: 0;
 
 		.box {
-			height: 360px;
-			flex: 0 0 360px;
+			/* width: 100vw; */
+			flex: 0 0 100vw;
 		}
 		.box1 {
 			background-color: yellow;
@@ -100,8 +105,15 @@ import "../styles/main.scss";
 			background-color: blue;
 		}
 	}
-	.angkat-view{
-		height: 1920px;
+	.angkat-view {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 1080px;
+		width: 100vw;
+		h1{
+			color: black
+		}
 	}
 </style>
 
@@ -139,32 +151,42 @@ import "../styles/main.scss";
 			<div class="box box3">BOX 3</div>
 		</div>
 		<div class="angkat-view">
-			ANGKAT VIEW
+			<h1>INI VIEW SELANJUTNYA</h1>
 		</div>
 	</body>
 </html>
 
 <script>
+	//@ts-nocheck
 	//SCRIPT ALWAYS RENDERED CLIENT-SIDE
 	import gsap from "gsap";
 	import { ScrollTrigger } from "gsap/ScrollTrigger";
-	import LocomotiveScroll from "locomotive-scroll";
-	const scroll = new LocomotiveScroll({
-		lenisOptions: {
-			lerp: 0.5,
-			duration: 2,
-		},
-	});
+	// import LocomotiveScroll from "locomotive-scroll";
+	// const scroll = new LocomotiveScroll({
+	// lenisOptions: {
+	// lerp: 0.5,
+	// duration: 2,
+	// },
+	// });
 
-	gsap.registerPlugin(ScrollTrigger) 
-	gsap.to('.box1', {
-	scrollTrigger: {
-		trigger: '.box',
-		markers: true,
-		onEnter: ()=>{
-			console.log("im here")
-		}
-	},
-	backgroundColor:'#ffff'
-});
+	gsap.registerPlugin(ScrollTrigger);
+	const boxes = gsap.utils.toArray(".box");
+	const boxesWrapper = document.querySelector(".horizontal-section-wrapper");
+	console.log(boxes);
+	gsap.to(boxes, {
+		ease: "none",
+		xPercent: -100 * (boxes.length - 1),
+
+		scrollTrigger: {
+			trigger: boxesWrapper,
+			markers: true,
+			pin: true,
+			scrub: 1,
+			end: "+=500",
+			onEnter: () => {
+				console.log("im here");
+			},
+		},
+		backgroundColor: "blue",
+	});
 </script>

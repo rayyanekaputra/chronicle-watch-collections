@@ -1,9 +1,11 @@
 ---
+
 ---
 
 <style>
     body {
         overscroll-behavior: none;
+        display: flex
         height: 100vh;
     }
     .container {
@@ -88,7 +90,6 @@
 </html>
 
 <script>
-
     //@ts-nocheck
 
     import gsap from "gsap";
@@ -104,11 +105,14 @@
 
         gsap.to(sections, {
             xPercent: -100 * (sections.length - 1),
+            
             ease: "none",
             scrollTrigger: {
                 trigger: container,
                 pin: true,
                 scrub: 1,
+                markers: true,
+
                 //base vertical scrolling on how wide the container is so it feels more natural.
                 end: "+=3500",
             },
