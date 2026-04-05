@@ -1,0 +1,117 @@
+---
+---
+
+<style>
+    body {
+        overscroll-behavior: none;
+        height: 100vh;
+    }
+    .container {
+        overscroll-behavior: none;
+        width: 600%;
+        height: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        background-color: yellow;
+    }
+
+    .container .panel {
+        width: 100vw;
+    }
+</style>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="description panel">
+                <h1>Mixed horizontal and vertical scrolling sections.</h1>
+                <p>
+                    Scroll vertically to scrub the horizontal animations and
+                    also scroll through the vertical sections
+                </p>
+                <div class="scroll-down">
+                    <div class="arrow"></div>
+                </div>
+            </div>
+
+            <section class="panel green">
+                <h2 class="panel__number">1</h2>
+            </section>
+            <section class="panel">
+                <h2 class="panel__number">2</h2>
+            </section>
+            <section class="panel purple">
+                <h2 class="panel__number">3</h2>
+            </section>
+            <section class="panel">
+                <h2 class="panel__number">4</h2>
+            </section>
+            <section class="panel green">
+                <h2 class="panel__number">5</h2>
+            </section>
+        </div>
+        <section class="panel">
+            <h2 class="panel__number">1</h2>
+        </section>
+        <section class="panel orange">
+            <h2 class="panel__number">2</h2>
+        </section>
+        <section class="panel">
+            <h2 class="panel__number">3</h2>
+        </section>
+        <section class="panel green">
+            <h2 class="panel__number">4</h2>
+        </section>
+        <div class="container">
+            <section class="panel">
+                <h2 class="panel__number">1</h2>
+            </section>
+            <section class="panel green">
+                <h2 class="panel__number">2</h2>
+            </section>
+            <section class="panel">
+                <h2 class="panel__number">3</h2>
+            </section>
+            <section class="panel purple">
+                <h2 class="panel__number">4</h2>
+            </section>
+            <section class="panel">
+                <h2 class="panel__number">5</h2>
+            </section>
+        </div>
+    </body>
+</html>
+
+<script>
+
+    //@ts-nocheck
+
+    import gsap from "gsap";
+
+    import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    let horizontalSections = gsap.utils.toArray(".container");
+    console.log(horizontalSections);
+    horizontalSections.forEach((container) => {
+        let sections = container.querySelectorAll(".panel");
+
+        gsap.to(sections, {
+            xPercent: -100 * (sections.length - 1),
+            ease: "none",
+            scrollTrigger: {
+                trigger: container,
+                pin: true,
+                scrub: 1,
+                //base vertical scrolling on how wide the container is so it feels more natural.
+                end: "+=3500",
+            },
+        });
+    });
+</script>

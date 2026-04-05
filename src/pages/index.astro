@@ -93,6 +93,12 @@ import "../styles/main.scss";
 		.box1 {
 			background-color: yellow;
 		}
+		.box2 {
+			background-color: red;
+		}
+		.box3 {
+			background-color: blue;
+		}
 	}
 	.angkat-view{
 		height: 1920px;
@@ -140,6 +146,8 @@ import "../styles/main.scss";
 
 <script>
 	//SCRIPT ALWAYS RENDERED CLIENT-SIDE
+	import gsap from "gsap";
+	import { ScrollTrigger } from "gsap/ScrollTrigger";
 	import LocomotiveScroll from "locomotive-scroll";
 	const scroll = new LocomotiveScroll({
 		lenisOptions: {
@@ -147,4 +155,16 @@ import "../styles/main.scss";
 			duration: 2,
 		},
 	});
+
+	gsap.registerPlugin(ScrollTrigger) 
+	gsap.to('.box1', {
+	scrollTrigger: {
+		trigger: '.box',
+		markers: true,
+		onEnter: ()=>{
+			console.log("im here")
+		}
+	},
+	backgroundColor:'#ffff'
+});
 </script>
