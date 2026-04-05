@@ -161,13 +161,13 @@ import "../styles/main.scss";
 	//SCRIPT ALWAYS RENDERED CLIENT-SIDE
 	import gsap from "gsap";
 	import { ScrollTrigger } from "gsap/ScrollTrigger";
-	// import LocomotiveScroll from "locomotive-scroll";
-	// const scroll = new LocomotiveScroll({
-	// lenisOptions: {
-	// lerp: 0.5,
-	// duration: 2,
-	// },
-	// });
+	import LocomotiveScroll from "locomotive-scroll";
+	const scroll = new LocomotiveScroll({
+	lenisOptions: {
+	lerp: 0.5,
+	duration: 2,
+	},
+	});
 
 	gsap.registerPlugin(ScrollTrigger);
 	const boxes = gsap.utils.toArray(".box");
@@ -182,10 +182,7 @@ import "../styles/main.scss";
 			markers: true,
 			pin: true,
 			scrub: 1,
-			end: "+=500",
-			onEnter: () => {
-				console.log("im here");
-			},
+			end: ()=>"+="+(boxesWrapper.offsetWidth+80) //+80 karena ada margin-bottom,
 		},
 		backgroundColor: "blue",
 	});
