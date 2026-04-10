@@ -14,7 +14,6 @@ import "../styles/main.scss";
 		overscroll-behavior: none;
 		display: flex;
 		flex-direction: column;
-
 	}
 	.hero-section {
 		background-size: cover;
@@ -100,45 +99,102 @@ import "../styles/main.scss";
 			justify-content: end;
 			padding: 40px;
 
-			p{
+			p {
 				font-size: 16px;
 				text-transform: uppercase;
 			}
-
-
 		}
 		.box1 {
-			background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), 60% ,rgba(255, 255, 255, 0.0)), url(../images/hori-1.jpg);
+			background:
+				linear-gradient(
+					0deg,
+					rgba(0, 0, 0, 0.6),
+					60%,
+					rgba(255, 255, 255, 0)
+				),
+				url(../images/hori-1.jpg);
 			background-size: cover;
 		}
 		.box2 {
-			background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), 60% ,rgba(255, 255, 255, 0.0)), url(../images/hori-2.jpg);
+			background:
+				linear-gradient(
+					0deg,
+					rgba(0, 0, 0, 0.6),
+					60%,
+					rgba(255, 255, 255, 0)
+				),
+				url(../images/hori-2.jpg);
 			background-size: cover;
 		}
 		.box3 {
-			background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), 60% ,rgba(255, 255, 255, 0.0)), url(../images/hori-3.jpg);
+			background:
+				linear-gradient(
+					0deg,
+					rgba(0, 0, 0, 0.6),
+					60%,
+					rgba(255, 255, 255, 0)
+				),
+				url(../images/hori-3.jpg);
 			background-size: cover;
 		}
 	}
 	.footer {
+		#FOOTER-LOGO{
+			padding-bottom: 20px;
+		}
 		display: flex;
 		align-items: start;
 		justify-content: end;
 		flex-direction: column;
-		height: 1200px;
+		height: 850px;
 		width: 100vw;
 		background-color: #0d0907;
 		padding: 550px 16px 16px 16px;
-		h1{
+		h1 {
 			color: #ffffff;
 			width: 100%;
 			font-size: 12.19vw;
-			background-color: blue;
 		}
-		p{
+		p,
+		a {
 			color: #ffffff;
 			text-transform: uppercase;
+			font-size: 8px;
 		}
+
+		.footer-navs {
+			display: flex;
+			flex-direction: row;
+			/* background-color: darkkhaki; */
+			width: 100%;
+			justify-content: space-between;
+			padding-bottom: 36px;
+			
+			.footer-navs-header{
+				padding-bottom: 8px;
+			}
+		}
+		.footer-copyright {
+			display: flex;
+			flex-direction: row;
+			/* background-color: blue; */
+			width: 100%;
+			justify-content: space-between;
+			padding-bottom: 2px;
+			p {
+				opacity: 0.5;
+			}
+		}
+		li {
+			list-style-type: none;
+			p {
+				opacity: 0.5;
+			}
+			a {
+				text-decoration: none;
+			}
+		}
+		font-size: 8px;
 	}
 </style>
 
@@ -172,51 +228,125 @@ import "../styles/main.scss";
 		</div>
 		<div class="horizontal-section-wrapper">
 			<div class="box box1">
-				<h1>
-					PREMIUM
-				</h1>
+				<h1>PREMIUM</h1>
 				<p>
-					Quality over quantity. We made things for people that values time.
+					Quality over quantity. We made things for people that values
+					time.
 				</p>
 			</div>
 			<div class="box box2">
-				<h1>
-					CLASSIC
-				</h1>
+				<h1>CLASSIC</h1>
 				<p>
-					Trusted since 2015. We are proudly presented by many artist across the globe.
+					Trusted since 2015. We are proudly presented by many artist
+					across the globe.
 				</p>
 			</div>
 			<div class="box box3">
-				<h1>
-					EXCLUSIVE
-				</h1>
+				<h1>EXCLUSIVE</h1>
 				<p>
-					Deliver with your own personality. We design, implement, and craft with passions and pride.
+					Deliver with your own personality. We design, implement, and
+					craft with passions and pride.
 				</p>
 			</div>
 		</div>
-		<div class="footer">
-					<div class="before-navs">
-			<p>View More</p>
-		</div>
-			<h1>CHRONICLE</h1>
-		</div>
 
+		<div class="footer">
+			<div class="footer-navs">
+				<div data-scroll class="footer-navs-wrapper">
+					<p class="footer-navs-header">Home</p>
+					<nav>
+						<ul>
+							<li><a href="#"><p>Main</p></a></li>
+							<li><a href="#"><p>Latest</p></a></li>
+							<li><a href="#"><p>Updates</p></a></li>
+						</ul>
+					</nav>
+				</div>
+
+				<div data-scroll class="footer-navs-wrapper">
+					<p class="footer-navs-header">About</p>
+					<nav>
+						<ul>
+							<li><a href="#"><p>Company</p></a></li>
+							<li><a href="#"><p>Team</p></a></li>
+							<li><a href="#"><p>Careers</p></a></li>
+						</ul>
+					</nav>
+				</div>
+
+				<div data-scroll class="footer-navs-wrapper">
+					<p class="footer-navs-header">Services</p>
+					<nav>
+						<ul>
+							<li><a href="#"><p>Design</p></a></li>
+							<li><a href="#"><p>Development</p></a></li>
+							<li><a href="#"><p>Consulting</p></a></li>
+						</ul>
+					</nav>
+				</div>
+
+				<div data-scroll class="footer-navs-wrapper">
+					<p class="footer-navs-header">Support</p>
+					<nav>
+						<ul>
+							<li><a href="#"><p>Help Center</p></a></li>
+							<li><a href="#"><p>FAQ</p></a></li>
+							<li><a href="#"><p>Contact</p></a></li>
+						</ul>
+					</nav>
+				</div>
+
+				<div data-scroll class="footer-navs-wrapper">
+					<p class="footer-navs-header">Legal</p>
+					<nav>
+						<ul>
+							<li><a href="#"><p>Privacy Policy</p></a></li>
+							<li><a href="#"><p>Terms</p></a></li>
+							<li><a href="#"><p>Cookies</p></a></li>
+						</ul>
+					</nav>
+				</div>
+
+				<div data-scroll class="footer-navs-wrapper">
+					<p class="footer-navs-header">Social</p>
+					<nav>
+						<ul>
+							<li><a href="#"><p>Facebook</p></a></li>
+							<li><a href="#"><p>Twitter</p></a></li>
+							<li><a href="#"><p>Instagram</p></a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+
+			<div class="footer-copyright">
+				<div class="footer-copyright-items">
+					<p>COPYRIGHT</p>
+				</div>
+				<div class="footer-copyright-items">
+					<p>CREDIT</p>
+				</div>
+				<div class="footer-copyright-items">
+					<p>SOCIAL MEDIA</p>
+				</div>
+			</div>
+
+			<h1 id="FOOTER-LOGO" data-scroll data-scroll-speed="0.3">CHRONICLE</h1>
+		</div>
 	</body>
 </html>
 
 <script>
 	//@ts-nocheck
-	//SCRIPT ALWAYS RENDERED CLIENT-SIDE
+	//SCRIPT ALWAYS RENDERED CLIENT
 	import gsap from "gsap";
 	import { ScrollTrigger } from "gsap/ScrollTrigger";
 	import LocomotiveScroll from "locomotive-scroll";
 	const scroll = new LocomotiveScroll({
-	lenisOptions: {
-	lerp: 0.5,
-	duration: 2,
-	},
+		lenisOptions: {
+			lerp: 0.5,
+			duration: 2,
+		},
 	});
 
 	gsap.registerPlugin(ScrollTrigger);
@@ -232,8 +362,7 @@ import "../styles/main.scss";
 			markers: true,
 			pin: true,
 			scrub: 1,
-			end: ()=>"+="+(boxesWrapper.offsetWidth+80) //+80 karena ada margin-bottom,
+			end: () => "+=" + (boxesWrapper.offsetWidth + 80), //+80 karena ada margin-bottom,
 		},
 	});
 </script>
-	
