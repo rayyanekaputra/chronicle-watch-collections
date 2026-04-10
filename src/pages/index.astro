@@ -14,8 +14,7 @@ import "../styles/main.scss";
 		overscroll-behavior: none;
 		display: flex;
 		flex-direction: column;
-		/* height: 8000px; */
-		/* display: block; */
+
 	}
 	.hero-section {
 		background-size: cover;
@@ -109,26 +108,36 @@ import "../styles/main.scss";
 
 		}
 		.box1 {
-			background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6), 60% ,rgba(255, 255, 255, 0.0)), url(../images/hori-1.jpg);
+			background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), 60% ,rgba(255, 255, 255, 0.0)), url(../images/hori-1.jpg);
 			background-size: cover;
 		}
 		.box2 {
-			background-image: url(../images/hori-2.jpg);
+			background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), 60% ,rgba(255, 255, 255, 0.0)), url(../images/hori-2.jpg);
 			background-size: cover;
 		}
 		.box3 {
-			background-image: url(../images/hori-3.jpg);
+			background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), 60% ,rgba(255, 255, 255, 0.0)), url(../images/hori-3.jpg);
 			background-size: cover;
 		}
 	}
-	.angkat-view {
+	.footer {
 		display: flex;
-		align-items: center;
-		justify-content: center;
-		height: 1080px;
+		align-items: start;
+		justify-content: end;
+		flex-direction: column;
+		height: 1200px;
 		width: 100vw;
+		background-color: #0d0907;
+		padding: 550px 16px 16px 16px;
 		h1{
-			color: black
+			color: #ffffff;
+			width: 100%;
+			font-size: 12.19vw;
+			background-color: blue;
+		}
+		p{
+			color: #ffffff;
+			text-transform: uppercase;
 		}
 	}
 </style>
@@ -187,9 +196,13 @@ import "../styles/main.scss";
 				</p>
 			</div>
 		</div>
-		<div class="angkat-view">
-			<h1>INI VIEW SELANJUTNYA</h1>
+		<div class="footer">
+					<div class="before-navs">
+			<p>View More</p>
 		</div>
+			<h1>CHRONICLE</h1>
+		</div>
+
 	</body>
 </html>
 
@@ -223,3 +236,4 @@ import "../styles/main.scss";
 		},
 	});
 </script>
+	
