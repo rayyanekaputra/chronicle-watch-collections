@@ -1,0 +1,212 @@
+@import "locomotive-scroll/dist/locomotive-scroll.css";
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Boldonse&display=swap");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overscroll-behavior: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-section {
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.sticky-section-1 {
+    background-image: url(../images/pexels-zeeshaanshabbir-9200228.jpg);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.sticky-section-2 {
+    background-image: url(../images/pexels-ninetysevenyears-30508184.jpg);
+
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.sticky-section-3 {
+    background-image: url(../images/pexels-el-gringo-photo-116752370-10658200.jpg);
+
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+
+.sticky-navbar-container {
+    display: flex;
+    flex-direction: column;
+}
+
+
+h1 {
+    font-family: "Boldonse";
+    color: white;
+}
+
+p {
+    font-family: "Archivo Narrow";
+    font-weight: 400;
+    font-size: 10px;
+    color: white;
+}
+
+.navigation-bar {
+    position: sticky;
+    top: 0;
+    /* background-color: yellow; */
+    z-index: 99;
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        column-gap: 32px;
+
+        align-items: center;
+        justify-content: center;
+
+        margin-top: 20px;
+        margin-bottom: -80px;
+    }
+}
+
+.horizontal-section-wrapper {
+    display: flex;
+    flex-direction: row;
+    /* overflow: scroll; */
+    overscroll-behavior: none;
+    flex-wrap: nowrap;
+    height: 100vh;
+    z-index: 0;
+
+    .box {
+        /* width: 100vw; */
+        flex: 0 0 100vw;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: start;
+        justify-content: end;
+        padding: 40px;
+
+        p {
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+    }
+
+    .box1 {
+        background:
+            linear-gradient(0deg,
+                rgba(0, 0, 0, 0.6),
+                60%,
+                rgba(255, 255, 255, 0)),
+            url(../images/hori-1.jpg);
+        background-size: cover;
+    }
+
+    .box2 {
+        background:
+            linear-gradient(0deg,
+                rgba(0, 0, 0, 0.6),
+                60%,
+                rgba(255, 255, 255, 0)),
+            url(../images/hori-2.jpg);
+        background-size: cover;
+    }
+
+    .box3 {
+        background:
+            linear-gradient(0deg,
+                rgba(0, 0, 0, 0.6),
+                60%,
+                rgba(255, 255, 255, 0)),
+            url(../images/hori-3.jpg);
+        background-size: cover;
+    }
+}
+
+.footer {
+    #FOOTER-LOGO {
+        padding-bottom: 20px;
+    }
+
+    display: flex;
+    align-items: start;
+    justify-content: end;
+    flex-direction: column;
+    height: 750px;
+    width: 100vw;
+    background-color: #0d0907;
+    padding: 550px 16px 16px 16px;
+
+    h1 {
+        color: #ffffff;
+        width: 100%;
+        font-size: 12.19vw;
+    }
+
+    p,
+    a {
+        color: #ffffff;
+        text-transform: uppercase;
+        font-size: 8px;
+    }
+
+    .footer-navs {
+        display: flex;
+        flex-direction: row;
+        /* background-color: darkkhaki; */
+        width: 100%;
+        justify-content: space-between;
+        padding-bottom: 36px;
+
+        .footer-navs-header {
+            padding-bottom: 8px;
+        }
+    }
+
+    .footer-copyright {
+        display: flex;
+        flex-direction: row;
+        /* background-color: blue; */
+        width: 100%;
+        justify-content: space-between;
+        padding-bottom: 2px;
+
+        p {
+            opacity: 0.5;
+        }
+    }
+
+    li {
+        list-style-type: none;
+
+        p {
+            opacity: 0.5;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    }
+
+    font-size: 8px;
+}
